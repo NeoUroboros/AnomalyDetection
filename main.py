@@ -1,5 +1,9 @@
 import pandas as pd
 from abc import ABC, abstractmethod
+from sklearn.ensemble import IsolationForest
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+import time
 import sqlite3
 
 
@@ -233,10 +237,31 @@ factory.registerFormat('sav', CreateSPSS)
 factory.registerFormat('sqlite', CreateSQL)
 factory.registerFormat('pkl', CreatePickle)
 
-# Ejemplo de uso
+# Simular la pantalla de carga mientras se procesa el archivo
+for i in tqdm(range(100), desc="Procesando datos...", ascii=True):
+    time.sleep(0.4)  # Simulación de procesamiento
+
 doc = factory.getDocument("data/raw/Jsonaexcel.xlsx")
 df = doc.readDocument()
-print(df)
 df = df.drop("Column1.created_date", axis=1)
 df = df.drop("Column1.id", axis=1)
-print(df)
+# Manejar valores NaN
+df = df.fillna(0)
+
+
+iso_forest = IsolationForest(contamination=0.1)
+iso_forest.fit(df)
+
+df['anomaly_score'] = iso_forest.fit_predict(df)
+
+df['anomaly'] = df['anomaly_score'].apply(lambda x: "Anomaly" if x == -1 else 'Normal')
+
+df.to_csv("data/output/Jsonaexcel.csv")
+
+plt.figure(figsize=(6,6))
+df['anomaly'].value_counts().plot.pie(autopct='%1.1f%%', colors=['green', 'red'], shadow=True, startangle=90)
+plt.title('Proporción de Anomalías')
+plt.ylabel('')
+plt.show()
+
+print("Análisis completado y gráfico generado.")
