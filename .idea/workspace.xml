@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfe83f06-d46c-4da1-b1f2-f4329a5b7ffd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data_processing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visualization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryMethod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -76,7 +74,7 @@
       <workItem from="1728833568223" duration="45000" />
       <workItem from="1728833714623" duration="23000" />
       <workItem from="1729033779579" duration="4727000" />
-      <workItem from="1729096503306" duration="11544000" />
+      <workItem from="1729096503306" duration="20808000" />
     </task>
     <servers />
   </component>
@@ -84,6 +82,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AnomalyDetection$main.coverage" NAME="main Coverage Results" MODIFIED="1729109569529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnomalyDetection$main.coverage" NAME="main Coverage Results" MODIFIED="1729121273212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
