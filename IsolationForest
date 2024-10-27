@@ -150,3 +150,9 @@ se trabaja con conjuntos de datos grandes y multivariados. Su enfoque basado en 
 aislamiento lo hace único y eficiente para identificar puntos de datos que se comportan de manera
 diferente al resto. Además, es flexible en cuanto a las distribuciones de los datos y tiene una
 implementación fácil en Python con **scikit-learn**.
+
+Funciona de la sgte manera, al conjunto de datos se le pica usando un valor X de una columna Y,
+se divide en los que son mayores y menores, se vuelve a aplicar el mismo proceso con otra
+columna, hasta aislarlos todos o en su defecto llegar a un maximo de profundidad. Se realizan varios
+arboles para de esta forma conformar el bosque de aislamiento, luego se comparan entre ellos,
+usando el promedio para determinar que fila puede ser catalogada como anomalia
