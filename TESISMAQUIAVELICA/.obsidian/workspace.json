@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmos de Deteccion de Anomalias/Isolation Forest.md",
+                "file": "Patrones de Diseño/Strategy Pattern.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Isolation Forest"
+              "title": "Strategy Pattern"
             }
           }
         ],
@@ -222,14 +222,16 @@
   },
   "active": "7f7e650bc03284c5",
   "lastOpenFiles": [
+    "zmisc/Pasted image 20241128175045.png",
+    "Patrones de Diseño/Factory Method.md",
+    "Patrones de Diseño/Strategy Pattern.md",
+    "Algoritmos de Deteccion de Anomalias/Isolation Forest.md",
     "Validación de Propuesta.md",
     "Validación de Propuesta Tesis.md",
     "Algoritmos en cuestion.md",
     "Tesis.md",
     "Contexto Mineria de Datos/Minería de Datos.md",
-    "Algoritmos de Deteccion de Anomalias/Isolation Forest.md",
     "Contexto Mineria de Datos",
-    "Patrones de Diseño/Factory Method.md",
     "zmisc/Pasted image 20241127160536.png",
     "zmisc/Pasted image 20241127160407.png",
     "zmisc/Pasted image 20241127160356.png",
@@ -239,7 +241,6 @@
     "zmisc/factory-method-en.png",
     "New folder/factory-method-en.png.opdownload",
     "zmisc",
-    "Patrones de Diseño/Strategy Pattern.md",
     "Bibliografía/Bibliografia.md",
     "Bienvenido.md",
     "Patrones de Diseño",

@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dfe83f06-d46c-4da1-b1f2-f4329a5b7ffd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7 Palabras .xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/7 Palabras .xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base de Datos-Problemática.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactoryMethod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IsolationForest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Optimization.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/data_preprocessing/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/data_preprocessing/preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESISMAQUIAVELICA/.obsidian/workspace.json" beforeDir="false" afterPath="$PROJECT_DIR$/TESISMAQUIAVELICA/.obsidian/workspace.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESISMAQUIAVELICA/Patrones de Diseño/Strategy Pattern.md" beforeDir="false" afterPath="$PROJECT_DIR$/TESISMAQUIAVELICA/Patrones de Diseño/Strategy Pattern.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +94,7 @@
       <workItem from="1732713655986" duration="24000" />
       <workItem from="1732718921917" duration="599000" />
       <workItem from="1732740069015" duration="3732000" />
+      <workItem from="1732833520693" duration="1481000" />
     </task>
     <servers />
   </component>
