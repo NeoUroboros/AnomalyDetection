@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfe83f06-d46c-4da1-b1f2-f4329a5b7ffd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Optimization.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/Jsonaexcel.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/Jsonaexcel.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7 Palabras .xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/7 Palabras .xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base de Datos-Problemática.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryMethod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IsolationForest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Optimization.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/data_preprocessing/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/data_preprocessing/preprocessing.py" afterDir="false" />
     </list>
@@ -26,6 +29,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -39,6 +45,7 @@
   &quot;keyToString&quot;: {
     &quot;Python.csv_document.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.preprocessing.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -83,11 +90,31 @@
       <workItem from="1729969924039" duration="5239000" />
       <workItem from="1730050734485" duration="6484000" />
       <workItem from="1730058287153" duration="487000" />
+      <workItem from="1730135656529" duration="2695000" />
+      <workItem from="1730138371224" duration="448000" />
+      <workItem from="1730138858553" duration="6946000" />
+      <workItem from="1730226264532" duration="925000" />
+      <workItem from="1732579933970" duration="1783000" />
+      <workItem from="1732713390530" duration="127000" />
+      <workItem from="1732713655986" duration="24000" />
+      <workItem from="1732718921917" duration="599000" />
+      <workItem from="1732740069015" duration="3732000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -109,6 +136,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AnomalyDetection$csv_document.coverage" NAME="csv_document Coverage Results" MODIFIED="1729976049073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/document_processing" />
-    <SUITE FILE_PATH="coverage/AnomalyDetection$main.coverage" NAME="main Coverage Results" MODIFIED="1730057389571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnomalyDetection$main.coverage" NAME="main Coverage Results" MODIFIED="1732581100131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnomalyDetection$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1730141674918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/data_preprocessing" />
   </component>
 </project>
