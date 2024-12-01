@@ -17,7 +17,7 @@ try:
 
     # Lectura del archivo
     start_lecture_time = time.time()
-    doc = factory.getDocument("data/raw/Jsonaexcel.csv")
+    doc = factory.getDocument("data/raw/isoforest.csv")
     df = doc.readDocument()
     if df is None or df.empty:
         raise ValueError("El archivo no contiene datos o no se pudo leer correctamente.")
@@ -52,11 +52,12 @@ try:
     end_predict_time = time.time()
 
     # Guardado y visualización
-    df_result.to_csv("data/output/Jsonaexcel.csv", index=False)
+    df_result.to_csv("data/output/high_density_with_noise.csv", index=False)
     print("Análisis completado y gráfico generado.")
 
     plot_anomaly_pie(df_result)
     print("Análisis completado y gráfico generado.")
+
     # Métricas de tiempo
     end_time = time.time()
     print(f"Tiempo total de lectura: {end_lecture_time - start_lecture_time:.2f}")

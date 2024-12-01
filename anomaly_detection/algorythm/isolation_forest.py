@@ -5,7 +5,7 @@ from anomaly_detection.anomaly_detection_strategy import AnomalyDetectionStrateg
 
 # Implementa Isolation Forest como una estrategia
 class IsolationForestStrategy(AnomalyDetectionStrategy):
-    def __init__(self, contamination=0.1, random_state=42):
+    def __init__(self, contamination="auto", random_state=42):
         self.model = IsolationForest(contamination=contamination, random_state=random_state)
 
     def fit(self, data):
