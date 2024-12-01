@@ -3,7 +3,8 @@
 
 El patrón de diseño de comportamiento Strategy te permite definir una familia de algoritmos, poner cada uno de ellos en una clase separada y hacer que sus objetos sean intercambiables.
 
-### Proble![[Pasted image 20241128175045.png]]ma:
+### ![[Pasted image 20241128175045.png]]
+## Problema
 
 Un día decidiste crear una aplicación de navegación para viajeros casuales. La aplicación se centraba en un hermoso mapa que ayudaba a los usuarios a orientarse rápidamente en cualquier ciudad.
 
@@ -14,7 +15,7 @@ La primera versión de la aplicación solo podía construir rutas sobre carreter
 Sin embargo, eso fue solo el comienzo. Más tarde planeaste agregar la construcción de rutas para ciclistas. Y aún más tarde, otra opción para construir rutas a través de todos los puntos turísticos de una ciudad.
 
 El código del navegador se volvió muy inflado.
-
+![[Pasted image 20241129133914.png]]
 Desde una perspectiva comercial, la aplicación fue un éxito, pero la parte técnica te causó muchos dolores de cabeza. Cada vez que agregabas un nuevo algoritmo de enrutamiento, la clase principal del navegador duplicaba su tamaño. En algún momento, la bestia se volvió demasiado difícil de mantener.
 
 Cualquier cambio en uno de los algoritmos, ya sea una simple corrección de errores o un ligero ajuste del puntaje de las calles, afectaba a toda la clase, aumentando la posibilidad de crear un error en el código que ya funcionaba.
@@ -31,6 +32,7 @@ El contexto no es responsable de seleccionar un algoritmo adecuado para el traba
 
 De esta manera, el contexto se vuelve independiente de estrategias concretas, por lo que puedes agregar nuevos algoritmos o modificar los existentes sin cambiar el código del contexto o de otras estrategias.
 
+![[Pasted image 20241129134021.png]]
 ### Estructura del Patrón Strategy:
 
 1. **Contexto**: Mantiene una referencia a una de las estrategias concretas y se comunica con este objeto solo a través de la interfaz de estrategia. [![Estructura del Patrón Strategy](https://refactoring.guru/images/patterns/diagrams/strategy/structure-2x.png)]
@@ -140,13 +142,3 @@ public class ExampleApplication {
 **Contras**:
 - Si solo tienes un par de algoritmos y rara vez cambian, no hay una razón real para complicar el programa con nuevas clases e interfaces que vienen con el patrón.
 - Los clientes deben estar al tanto de las diferencias entre las estrategias para poder seleccionar una adecuada.
-
-### Recursos Adicionales:
-
-- [Strategy Pattern en Refactoring Guru (en inglés)](https://refactoring.guru/design-patterns/strategy)
-- [Documentación de patrones de diseño en Microsoft Docs (en inglés)](https://docs.microsoft.com/en-us/dotnet/standard/design-patterns)
-- [Ejemplo en código Java en GeeksforGeeks (en inglés)](https://www.geeksforgeeks.org/strategy-pattern-set-1/)
-
----
-
-Espero que esta traducción con los enlaces a las imágenes te sea útil. Si necesitas más detalles o tienes alguna pregunta adicional, ¡házmelo saber! 🚀😊

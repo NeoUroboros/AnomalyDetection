@@ -8,4 +8,3 @@ def preprocess_data(df, columns):
 def postprocess_data(df, columns):
     # Reasignar las columnas faltantes
     pass
-

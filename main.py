@@ -1,67 +1,71 @@
 import time
 import pandas as pd
-import numpy as np
-from joblib import Parallel, delayed
-from sklearn.ensemble import IsolationForest
+from anomaly_detection.strategyselector import StrategySelector
+from anomaly_detection.anomaly_detector import AnomalyDetector
+from scripts.data_preprocessing.preprocessing import preprocess_data
 from scripts.document_processing.document_factory import DocumentFactory
 from scripts.document_processing.creator_factory import *
-from scripts.data_preprocessing.preprocessing import preprocess_data
 from utils.visualization import plot_anomaly_pie
 
-start_time = time.time()
-factory = DocumentFactory()
-factory.registerFormat('csv', CreateCSV)
-factory.registerFormat('xlsx', CreateExcel)
-factory.registerFormat('json', CreateJSON)
-factory.registerFormat('parquet', CreateParquet)
-factory.registerFormat('sqlite', CreateSQL)
-factory.registerFormat('h5', CreateHDF)
-factory.registerFormat('feather', CreateFeather)
-factory.registerFormat('dta', CreateStata)
-factory.registerFormat('sas7bdat', CreateSAS)
-factory.registerFormat('sav', CreateSPSS)
-factory.registerFormat('pkl', CreatePickle)
+try:
+    start_time = time.time()
 
-start_lecture_time = time.time()
-doc = factory.getDocument("data/raw/Jsonaexcel.csv")
-df = doc.readDocument()
-end_lecture_time = time.time()
+    # Inicializar la fábrica de documentos
+    factory = DocumentFactory()
+    factory.registerFormat('csv', CreateCSV)
+    factory.registerFormat('xlsx', CreateExcel)
 
-start_preprocess_time = time.time()
-columns = ["Column1.id", "Column1.created_date"]
-df = preprocess_data(df, columns)
-end_preprocess_time = time.time()
+    # Lectura del archivo
+    start_lecture_time = time.time()
+    doc = factory.getDocument("data/raw/Jsonaexcel.csv")
+    df = doc.readDocument()
+    if df is None or df.empty:
+        raise ValueError("El archivo no contiene datos o no se pudo leer correctamente.")
+    end_lecture_time = time.time()
 
-start_isomodel_time = time.time()
-iso_forest = IsolationForest(contamination=0.1, random_state=42)
-iso_forest.fit(df)
-end_isolationtreemodel_time = time.time()
+    # Preprocesamiento
+    start_preprocess_time = time.time()
+    columns = ["Column1.id", "Column1.created_date"]
+    df = preprocess_data(df, columns)
+    if df.empty:
+        raise ValueError("El DataFrame está vacío después del preprocesamiento.")
+    end_preprocess_time = time.time()
 
-n_splits = 4
-df_splits = np.array_split(df, n_splits)
+    # Selección de estrategia y creación del detector
+    start_strategy_time = time.time()
+    strategy_selector = StrategySelector(df)
+    strategy = strategy_selector.select()
+    if strategy is None:
+        raise ValueError("No se pudo seleccionar una estrategia para los datos proporcionados.")
+    detector = AnomalyDetector(strategy)
+    end_strategy_time = time.time()
 
+    # Entrenamiento y predicción
+    start_fit_time = time.time()
+    detector.fit(df)
+    end_fit_time = time.time()
 
-def predict_chunk(chunk):
-    chunk['anomaly_score'] = iso_forest.predict(chunk)
-    chunk['anomaly'] = chunk['anomaly_score'].apply(lambda x: "Anomaly" if x == -1 else 'Normal')
-    return chunk
+    start_predict_time = time.time()
+    df_result = detector.predict(df)
+    if df_result is None or df_result.empty:
+        raise ValueError("La predicción no retornó resultados válidos.")
+    end_predict_time = time.time()
 
+    # Guardado y visualización
+    df_result.to_csv("data/output/Jsonaexcel.csv", index=False)
+    print("Análisis completado y gráfico generado.")
 
-start_paral_time = time.time()
-df_processed = Parallel(n_jobs=n_splits)(delayed(predict_chunk)(chunk) for chunk in df_splits)
-end_parallel_time = time.time()
+    plot_anomaly_pie(df_result)
+    print("Análisis completado y gráfico generado.")
+    # Métricas de tiempo
+    end_time = time.time()
+    print(f"Tiempo total de lectura: {end_lecture_time - start_lecture_time:.2f}")
+    print(f"Tiempo total de preprocesamiento: {end_preprocess_time - start_preprocess_time:.2f}")
+    print(f"Tiempo total de selección de estrategia: {end_strategy_time - start_strategy_time:.2f}")
+    print(f"Estrategia utilizada: {detector.strategy}")
+    print(f"Tiempo total de entrenamiento: {end_fit_time - start_fit_time:.2f}")
+    print(f"Tiempo total de predicción: {end_predict_time - start_predict_time:.2f}")
+    print(f"Tiempo total: {end_time - start_time:.2f}")
 
-df_result = pd.concat(df_processed)
-df_result.to_csv("data/output/Jsonaexcel.csv", index=False)
-
-plot_anomaly_pie(df_result)
-print("Análisis completado y gráfico generado.")
-end_time = time.time()
-
-print(f"Tiempo total de lectura: {end_lecture_time - start_lecture_time:.2f}")
-print(f"Tiempo total de preprocesamiento: {end_preprocess_time - start_preprocess_time:.2f}")
-print(
-    f"Tiempo total de creacion del modelo de Isolation Forest: {end_isolationtreemodel_time - start_isomodel_time:.2f}")
-print(
-    f"Tiempo total de ejecucion del algorimto Isolation Forest en paralelo: {end_parallel_time - start_paral_time:.2f}")
-print(f"Tiempo total: {end_time - start_time:.2f}")
+except Exception as e:
+    print(f"Error encontrado: {e}")
