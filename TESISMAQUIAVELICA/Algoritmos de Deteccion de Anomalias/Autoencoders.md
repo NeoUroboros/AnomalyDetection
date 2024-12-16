@@ -160,3 +160,63 @@ Los autoencoders son herramientas poderosas para la detección de anomalías, es
     - El **error de reconstrucción** se usa para detectar las anomalías. Si el error es grande, eso indica que el punto es una anomalía, ya que el autoencoder no lo pudo reconstruir bien.
 
 En resumen, el autoencoder aprende a representar los datos normales de manera comprimida y luego, al intentar reconstruir los datos de entrada, genera un "error de reconstrucción". Los datos que tienen un **error alto** se consideran **anómalos** porque el modelo no sabe cómo representarlos bien. ¡Es un enfoque muy potente para detectar patrones inusuales en grandes volúmenes de datos!
+
+La cantidad de características (columnas) en las trazas dejadas por los equipos depende en gran medida del tipo de datos que se estén recopilando, la complejidad del sistema y cómo se estructuran esos datos. Sin embargo, a continuación te doy algunas pautas generales según diferentes tipos de sistemas industriales y equipos:
+
+### 1. **Equipos de Medición (Sensores)**
+
+- **Datos típicos**: Si el equipo está registrando mediciones de sensores (por ejemplo, temperatura, presión, velocidad), es común que cada traza incluya varias características, como:
+    - **Tiempos de medición** (timestamp)
+    - **Valores de sensores** (temperatura, presión, humedad, etc.)
+    - **Estado del sensor** (activo, inactivo)
+    - **Identificador del sensor** (si hay más de uno)
+    - **Ubicación** (si los sensores están distribuidos por distintas partes del equipo o instalación)
+- **Promedio de características**: Para un sistema simple, podría haber entre 5 a 20 características por traza, dependiendo de la cantidad de sensores y el nivel de detalle. En sistemas más complejos, como los que tienen múltiples condiciones de operación o múltiples variables medidas, esto podría escalar a 50 o más características.
+
+### 2. **Sistemas de Monitoreo de Mantenimiento**
+
+- **Datos típicos**: Los datos de mantenimiento pueden incluir características relacionadas con el rendimiento del equipo y su ciclo de vida, como:
+    - **Códigos de fallos o alarmas**
+    - **Tiempo de operación** (en horas o ciclos)
+    - **Frecuencia de mantenimiento**
+    - **Tipo de fallas**
+    - **Estado de componentes** (funcionando, defectuoso, etc.)
+- **Promedio de características**: En sistemas de monitoreo de mantenimiento, típicamente hay entre 10 y 30 características, dependiendo de la granularidad de los registros de fallos o las estadísticas de operación.
+
+### 3. **Sistemas de Control Industrial (SCADA)**
+
+- **Datos típicos**: Los sistemas SCADA recopilan datos en tiempo real sobre procesos industriales, como:
+    - **Tiempos de ejecución de procesos**
+    - **Flujos de materiales o energía**
+    - **Temperaturas y presiones de los sistemas**
+    - **Estados de interruptores, válvulas, motores, etc.**
+- **Promedio de características**: Dependiendo de cuántos dispositivos o puntos de monitoreo estén conectados al sistema, esto podría variar de 20 a más de 100 características por traza, especialmente en sistemas grandes de control industrial que monitorean múltiples parámetros simultáneamente.
+
+### 4. **Log de Eventos del Sistema o del Equipo**
+
+- **Datos típicos**: En los logs de eventos, típicamente se registran:
+    - **Timestamp**
+    - **Tipo de evento (error, advertencia, etc.)**
+    - **Descripción del evento**
+    - **Id de proceso o equipo**
+    - **Estado del sistema en el momento del evento**
+- **Promedio de características**: Los logs de eventos pueden tener entre 5 y 20 características, dependiendo de cuántos detalles se incluyan en los eventos registrados.
+
+### 5. **Datos de Producción**
+
+- **Datos típicos**: En fábricas o plantas de producción, los datos de producción pueden incluir:
+    - **Cantidad producida**
+    - **Tiempo de inicio y finalización**
+    - **Estado del equipo**
+    - **Temperaturas, velocidades, rendimientos**
+- **Promedio de características**: Dependiendo de la línea de producción, esto puede variar entre 5 y 50 características por traza.
+
+### Resumen:
+
+La cantidad promedio de características que puede tener una traza dependerá del tipo de equipo y sistema, pero en general:
+
+- **Sistemas simples** pueden tener entre 5 y 20 características por traza.
+- **Sistemas más complejos** pueden tener entre 30 y 50 características.
+- **Sistemas industriales grandes** (como SCADA o plantas de producción) podrían tener entre 50 y 100 características o incluso más.
+
+Si estás manejando un sistema de monitoreo o de sensores en particular, podrías revisar los registros de trazas para obtener una idea más precisa del número de características que realmente se están capturando.

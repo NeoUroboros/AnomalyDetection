@@ -14,6 +14,15 @@ try:
     factory = DocumentFactory()
     factory.registerFormat('csv', CreateCSV)
     factory.registerFormat('xlsx', CreateExcel)
+    factory.registerFormat('feather', CreateFeather)
+    factory.registerFormat('hdf', CreateHDF)
+    factory.registerFormat('json', CreateJSON)
+    factory.registerFormat('parquet', CreateParquet)
+    factory.registerFormat('pickle', CreatePickle)
+    factory.registerFormat('sas', CreateSAS)
+    factory.registerFormat('spss', CreateSPSS)
+    factory.registerFormat('sql', CreateSQL)
+    factory.registerFormat('stata', CreateStata)
 
     # Lectura del archivo
     start_lecture_time = time.time()
@@ -53,11 +62,7 @@ try:
 
     # Guardado y visualización
     df_result.to_csv("data/output/high_density_with_noise.csv", index=False)
-    print("Análisis completado y gráfico generado.")
-
-    plot_anomaly_pie(df_result)
-    print("Análisis completado y gráfico generado.")
-
+ 
     # Métricas de tiempo
     end_time = time.time()
     print(f"Tiempo total de lectura: {end_lecture_time - start_lecture_time:.2f}")
@@ -67,6 +72,9 @@ try:
     print(f"Tiempo total de entrenamiento: {end_fit_time - start_fit_time:.2f}")
     print(f"Tiempo total de predicción: {end_predict_time - start_predict_time:.2f}")
     print(f"Tiempo total: {end_time - start_time:.2f}")
+    print("Análisis completado y gráfico generado.")
+    plot_anomaly_pie(df_result)
+
 
 except Exception as e:
     print(f"Error encontrado: {e}")

@@ -69,16 +69,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmos de Deteccion de Anomalias/Autoencoders.md",
+                "file": "Algoritmos en cuestion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Autoencoders"
+              "title": "Algoritmos en cuestion"
+            }
+          },
+          {
+            "id": "3a66c8ab4e47e723",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algoritmos de Deteccion de Anomalias/Z-score.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Z-score"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -220,22 +234,28 @@
       "obsidian-tts:Text to Speech": false
     }
   },
-  "active": "7137042e0ff2ddae",
+  "active": "3a66c8ab4e47e723",
   "lastOpenFiles": [
-    "Algoritmos de Deteccion de Anomalias/DBSCAN.md",
-    "Algoritmos de Deteccion de Anomalias/Autoencoders.md",
-    "Algoritmos de Deteccion de Anomalias/Isolation Forest.md",
+    "Patrones de Diseño/Factory Method.md",
+    "Exposicion/Exposicion.md",
     "Algoritmos en cuestion.md",
+    "Exposicion",
+    "Algoritmos de Deteccion de Anomalias/Z-score.md",
+    "Algoritmos de Deteccion de Anomalias/Autoencoders.md",
+    "Algoritmos de Deteccion de Anomalias/DBSCAN.md",
+    "Algoritmos de Deteccion de Anomalias/Isolation Forest.md",
+    "Algoritmos de Deteccion de Anomalias/Prophet.md",
+    "zmisc/Criterios de Algoritmos.md",
+    "+ Falta por completar/Sin título.md",
+    "+ Falta por completar",
     "Contexto Mineria de Datos/Minería de Datos.md",
     "Comparaciones Algoritmos.md",
-    "Algoritmos de Deteccion de Anomalias/Z-score.md",
     "zmisc/Pasted image 20241129190411.png",
     "zmisc/Pasted image 20241129184938.png",
     "Patrones de Diseño/Strategy Pattern.md",
     "zmisc/Pasted image 20241129133914.png",
     "zmisc/Pasted image 20241129134021.png",
     "zmisc/Pasted image 20241128175045.png",
-    "Patrones de Diseño/Factory Method.md",
     "Validación de Propuesta.md",
     "Validación de Propuesta Tesis.md",
     "Tesis.md",
@@ -253,8 +273,6 @@
     "Bibliografía",
     "Archivos Adjuntos/7 Palabras .xlsx",
     "Archivos Adjuntos/Deteccion-de-Anomalias-en-Sistemas-IndustrialesTESIS.pptx",
-    "Archivos Adjuntos",
-    "~$Deteccion-de-Anomalias-en-Sistemas-IndustrialesTESIS.pptx",
-    "Deteccion-de-Anomalias-en-Sistemas-IndustrialesTESIS.pptx"
+    "Archivos Adjuntos"
   ]
 }

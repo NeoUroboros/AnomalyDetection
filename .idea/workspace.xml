@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfe83f06-d46c-4da1-b1f2-f4329a5b7ffd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TESISMAQUIAVELICA/+ Falta por completar/Sin título.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TESISMAQUIAVELICA/Algoritmos de Deteccion de Anomalias/Prophet.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TESISMAQUIAVELICA/zmisc/Criterios de Algoritmos.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anomaly_detection/algorythm/fsdaf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anomaly_detection/algorythm/prophe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anomaly_detection/algorythm/autoencoders.py" beforeDir="false" afterPath="$PROJECT_DIR$/anomaly_detection/algorythm/autoencoders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Deteccion-de-Anomalias-en-Sistemas-IndustrialesTESIS.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Deteccion-de-Anomalias-en-Sistemas-IndustrialesTESIS.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Informe de las practicas profesionales II.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Informe de las practicas profesionales II.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESISMAQUIAVELICA/.obsidian/workspace.json" beforeDir="false" afterPath="$PROJECT_DIR$/TESISMAQUIAVELICA/.obsidian/workspace.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESISMAQUIAVELICA/Algoritmos de Deteccion de Anomalias/Autoencoders.md" beforeDir="false" afterPath="$PROJECT_DIR$/TESISMAQUIAVELICA/Algoritmos de Deteccion de Anomalias/Autoencoders.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anomaly_detection/algorythm/isolation_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/anomaly_detection/algorythm/isolation_forest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anomaly_detection/algorythm/svmoneclass.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anomaly_detection/algorythm/thresholdrules.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anomaly_detection/algorythm/zscore.py" beforeDir="false" afterPath="$PROJECT_DIR$/anomaly_detection/algorythm/zscore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anomaly_detection/strategyselector.py" beforeDir="false" afterPath="$PROJECT_DIR$/anomaly_detection/strategyselector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output/high_density_with_noise.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/high_density_with_noise.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/raw/isoforest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/raw/isoforest.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,29 +53,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.anomaly_detection_strategy.executor": "Run",
-    "Python.autoencoders.executor": "Run",
-    "Python.csv_document.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.preprocessing.executor": "Run",
-    "Python.strategyselector.executor": "Run",
-    "Python.visualization.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/HP/Desktop/AnomalyDetection/data/raw",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.anomaly_detection_strategy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.arimasan.executor&quot;: &quot;Run&quot;,
+    &quot;Python.autoencoders.executor&quot;: &quot;Run&quot;,
+    &quot;Python.csv_document.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fsdaf.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.preprocessing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prophettime.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strategyselector.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualization.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Universidad/Practica II/AnomalyDetection&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\Desktop\AnomalyDetection\data\raw" />
@@ -111,7 +129,13 @@
       <workItem from="1733008504637" duration="4824000" />
       <workItem from="1733065582421" duration="6498000" />
       <workItem from="1733073503834" duration="6031000" />
-      <workItem from="1733080245070" duration="6535000" />
+      <workItem from="1733080245070" duration="12984000" />
+      <workItem from="1733175318893" duration="28539000" />
+      <workItem from="1733440308452" duration="24000" />
+      <workItem from="1733492546851" duration="1345000" />
+      <workItem from="1733692716960" duration="3705000" />
+      <workItem from="1733875956037" duration="407000" />
+      <workItem from="1733876537820" duration="6421000" />
     </task>
     <servers />
   </component>
@@ -147,11 +171,6 @@
           <url>file://$PROJECT_DIR$/scripts/document_processing/pickle_document.py</url>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/anomaly_detection/strategyselector.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -159,9 +178,12 @@
     <SUITE FILE_PATH="coverage/AnomalyDetection$autoencoders.coverage" NAME="autoencoders Coverage Results" MODIFIED="1732931086782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/anomaly_detection/algorythm" />
     <SUITE FILE_PATH="coverage/AnomalyDetection$csv_document.coverage" NAME="csv_document Coverage Results" MODIFIED="1729976049073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/document_processing" />
     <SUITE FILE_PATH="coverage/AnomalyDetection$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1733080661941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/AnomalyDetection$arimasan.coverage" NAME="arimasan Coverage Results" MODIFIED="1733253615730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/anomaly_detection/algorythm" />
     <SUITE FILE_PATH="coverage/AnomalyDetection$anomaly_detection_strategy.coverage" NAME="anomaly_detection_strategy Coverage Results" MODIFIED="1733074551690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/anomaly_detection" />
-    <SUITE FILE_PATH="coverage/AnomalyDetection$main.coverage" NAME="main Coverage Results" MODIFIED="1733086724141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AnomalyDetection$strategyselector.coverage" NAME="strategyselector Coverage Results" MODIFIED="1733076735653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/anomaly_detection" />
+    <SUITE FILE_PATH="coverage/AnomalyDetection$main.coverage" NAME="main Coverage Results" MODIFIED="1733946063080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnomalyDetection$fsdaf.coverage" NAME="fsdaf Coverage Results" MODIFIED="1733254950609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/anomaly_detection/algorythm" />
+    <SUITE FILE_PATH="coverage/AnomalyDetection$strategyselector.coverage" NAME="strategyselector Coverage Results" MODIFIED="1733876713817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/anomaly_detection" />
     <SUITE FILE_PATH="coverage/AnomalyDetection$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1733077339499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/data_preprocessing" />
+    <SUITE FILE_PATH="coverage/AnomalyDetection$prophettime.coverage" NAME="prophettime Coverage Results" MODIFIED="1733228622107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/anomaly_detection/algorythm" />
   </component>
 </project>

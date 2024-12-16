@@ -3,7 +3,6 @@ from sklearn.ensemble import IsolationForest
 from anomaly_detection.anomaly_detection_strategy import AnomalyDetectionStrategy
 
 
-# Implementa Isolation Forest como una estrategia
 class IsolationForestStrategy(AnomalyDetectionStrategy):
     def __init__(self, contamination="auto", random_state=42):
         self.model = IsolationForest(contamination=contamination, random_state=random_state)
