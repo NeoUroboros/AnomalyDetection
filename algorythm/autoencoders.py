@@ -23,7 +23,7 @@ class AutoencodersStrategy(AnomalyDetectionStrategy):
         pass
 
     def predict(self, data):
-        reconstructions = keras.models.load_model("autoencoder_model.h5").predict(data)
+        reconstructions = keras.models.load_model("models/autoencoder_model.h5").predict(data)
         print("Got me here")
         loss = np.mean((data - reconstructions) ** 2, axis=1)
         threshold = np.percentile(loss, 95)  # Umbral de anomalías

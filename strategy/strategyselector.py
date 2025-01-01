@@ -24,7 +24,7 @@ class StrategySelector:
 
     def check_dimensionality(self):
         # Verifica si los datos tienen más de una columna
-        if self.data.shape[1] <= 1 or self.data.shape[1] <= 20:
+        if self.data.shape[1] <= 1 or self.data.shape[1] <= 50:
             return None  # No tiene sentido aplicar PCA si hay solo una columna
 
         # Aplica PCA a los datos
