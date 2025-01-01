@@ -44,9 +44,7 @@ class StrategySelector:
         if self.num_rows > 1_000_000:
             return IsolationForestStrategy()
         return None
-
     
-
     def check_distribution(self):
         # Toma un muestreo limitado (máx. 500000 filas) para el test
         sampled_data = self.data.sample(min(500000, len(self.data)))
@@ -86,9 +84,9 @@ class StrategySelector:
     def select(self):
         for check in [
             self.check_dimensionality,
-            #self.check_data_volume,
-            #self.check_distribution,
-            #self.check_density,
+            self.check_data_volume,
+            self.check_distribution,
+            self.check_density,
         ]:
             strategy = check()
             if strategy is not None:

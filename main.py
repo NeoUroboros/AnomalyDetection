@@ -7,7 +7,7 @@ from preprocess.data_preprocessing.preprocessing import preprocess_data
 from preprocess.document_processing.document_factory import DocumentFactory
 from preprocess.document_processing.creator_factory import *
 from utils.explanation import generate_rules
-from utils.visualization import plot_anomaly_pie
+from utils.visualization import plot_anomaly_pie, plot_anomaly_scatter
 
 try:
     start_time = time.time()
@@ -62,19 +62,20 @@ try:
         raise ValueError("La predicción no retornó resultados válidos.")
     end_predict_time = time.time()
 
-    # Guardado, visualización y explicación
-    #df_result.to_csv("data/output/high_density_with_noise.csv", index=False)
+# Guardado, visualización y explicación
+    df_result.to_csv("data/output/high_density_with_noise.csv", index=False)
     
     # Asegúrate de que el DataFrame de resultados contiene 'anomaly'
-    #if 'anomaly' not in df_result.columns:
-    #    raise ValueError("El DataFrame de resultados no contiene la columna 'anomaly'.")
+    if 'anomaly' not in df_result.columns:
+        raise ValueError("El DataFrame de resultados no contiene la columna 'anomaly'.")
 
     # Generar reglas para las anomalías detectadas
-    #output_rules_path = "data/output/anomaly_rules.txt"
-    #rules = generate_rules(df_result, output_path=output_rules_path)
+    output_rules_path = "data/output/anomaly_rules.txt"
+    rules = generate_rules(df_result, output_path=output_rules_path)
 
-    #  print(f"Reglas generadas:\n{rules}")
+    print(f"Reglas generadas:\n{rules}")
 
+    
     # Métricas de tiempo
     end_time = time.time()
     print(f"Tiempo total de lectura: {end_lecture_time - start_lecture_time:.2f}")
@@ -85,8 +86,13 @@ try:
     print(f"Tiempo total de predicción: {end_predict_time - start_predict_time:.2f}")
     print(f"Tiempo total: {end_time - start_time:.2f}")
     print("Análisis completado y gráfico generado.")
+    print(df.columns)
     plot_anomaly_pie(df_result)
+    plot_anomaly_scatter(df_result, 'Column1.timing', 'y')
+
+
 
 
 except Exception as e:
     print(f"Error encontrado: {e}")
+
