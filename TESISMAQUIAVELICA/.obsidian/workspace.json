@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmos en cuestion.md",
+                "file": "Exposicion/Exposición.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algoritmos en cuestion"
+              "title": "Exposición"
             }
           }
         ],
@@ -236,6 +236,13 @@
   },
   "active": "3a66c8ab4e47e723",
   "lastOpenFiles": [
+    "Exposicion/Métodos de seguridad de SI.md",
+    "Comparaciones Algoritmos.md",
+    "Algoritmos en cuestion.md",
+    "Validación de Propuesta.md",
+    "Validación de Propuesta Tesis.md",
+    "Tesis.md",
+    "+ Falta por completar/Sin título.md",
     "Algoritmos de Deteccion de Anomalias/Z-score.md",
     "zmisc/Pasted image 20241129184938.png",
     "zmisc/Pasted image 20241129184938 1.png",
@@ -249,14 +256,7 @@
     "Algoritmos de Deteccion de Anomalias/DBSCAN.md",
     "Algoritmos de Deteccion de Anomalias/Autoencoders.md",
     "Algoritmos de Deteccion de Anomalias/Isolation Forest.md",
-    "Validación de Propuesta.md",
-    "Validación de Propuesta Tesis.md",
-    "Algoritmos en cuestion.md",
-    "Tesis.md",
-    "Comparaciones Algoritmos.md",
     "Exposicion/Exposición.md",
-    "Exposicion/Métodos de seguridad de SI.md",
-    "+ Falta por completar/Sin título.md",
     "Untitled",
     "Patrones de Diseño/Factory Method.md",
     "Exposicion",

@@ -38,6 +38,4 @@ def plot_anomaly_scatter(df, feature_x, feature_y):
     plt.grid(True)
     plt.show()
 
-# Ejemplo de uso
-# Asumiendo que 'df_result' contiene las columnas 'feature_1', 'feature_2', y 'anomaly'
-# plot_anomaly_scatter(df_result, 'feature_1', 'feature_2')
+

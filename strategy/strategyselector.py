@@ -24,8 +24,8 @@ class StrategySelector:
 
     def check_dimensionality(self):
         # Verifica si los datos tienen más de una columna
-        if self.data.shape[1] <= 1 or self.data.shape[1] <= 50:
-            return None  # No tiene sentido aplicar PCA si hay solo una columna
+        if self.data.shape[1] <= 50:
+            return None  # No tiene sentido aplicar PCA si hay menos de 50 columnas
 
         # Aplica PCA a los datos
         pca = PCA()
@@ -34,11 +34,12 @@ class StrategySelector:
         # Calcula la varianza explicada acumulada
         explained_variance = pca.explained_variance_ratio_.cumsum()
 
-        # Verifica si tenemos al menos 10 componentes y si la varianza acumulada supera el 90% en el componente 10
-        if len(explained_variance) > 10 and explained_variance[10] > 0.9:
+        # Verifica si tenemos al menos 10 componentes y si la varianza acumulada supera el 85% en el componente 10
+        if len(explained_variance) >= 10 and explained_variance[9] >= 0.85:  # Cambia índice y relaja el criterio
             return AutoencodersStrategy(input_dim=self.num_columns)
 
         return None
+
 
     def check_data_volume(self):
         if self.num_rows > 1_000_000:
@@ -46,23 +47,23 @@ class StrategySelector:
         return None
     
     def check_distribution(self):
-        # Toma un muestreo limitado (máx. 500000 filas) para el test
-        sampled_data = self.data.sample(min(500000, len(self.data)))
-
-        # Aplica `normaltest` por columna y toma los p-values
+        sampled_data = self.data.sample(min(550000, len(self.data)))
         p_values = sampled_data.apply(normaltest, axis=0).iloc[1]
+    
+        print("P-values por columna:", p_values)
 
-        # Comprueba si todas las columnas tienen p_value > 0.05
-        if (p_values > 0.05).all():
+        # Relajamos el criterio al usar el promedio de los p-values
+        if p_values.mean() > 0.05:  # Condición basada en el promedio
+            print("Seleccionado: ZScoreStrategy (distribución normal detectada).")
             return ZScoreStrategy()
 
+        print("No se seleccionó ZScoreStrategy (distribución no completamente normal).")
         return None
 
-    def check_density(self):
-        
 
+    def check_density(self):
         numeric_data = self._get_temporary_numeric_columns()
-        if len(numeric_data) <= 50000:
+        if len(numeric_data) <= 15000:
             # Calcular las distancias a los 5 vecinos más cercanos
             neighbors = NearestNeighbors(n_neighbors=5).fit(self.data)
             distances, _ = neighbors.kneighbors(self.data)
@@ -74,9 +75,9 @@ class StrategySelector:
             print(f"Promedio de densidad: {avg_density}, Desviación estándar: {std_density}")
 
             # Condición mejorada para determinar si DBSCAN es apropiado
-            if avg_density < 0.3 and std_density < 0.6:  # Ajusta estos umbrales según tus datos
+            if avg_density < 4 and std_density < 3:  # Ajusta estos umbrales según tus datos
                 print("DBSCANStrategy seleccionado debido a alta densidad en los datos.")
-                return DBSCANStrategy(eps=0.5, min_samples=5)
+                return DBSCANStrategy(eps=1.05, min_samples=17)
 
             # Si no se cumplen las condiciones, devuelve None
         return None

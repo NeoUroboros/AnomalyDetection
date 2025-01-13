@@ -28,7 +28,7 @@ try:
 
     # Lectura del archivo
     start_lecture_time = time.time()
-    doc = factory.getDocument("data/raw/isoforest.csv")
+    doc = factory.getDocument("dataset_denso.csv")
     df = doc.readDocument()
     if df is None or df.empty:
         raise ValueError("El archivo no contiene datos o no se pudo leer correctamente.")
@@ -36,7 +36,8 @@ try:
 
     # Preprocesamiento
     start_preprocess_time = time.time()
-    columns = ["Column1.id", "Column1.created_date"]
+    ids = df['ID']
+    columns = ["Etiqueta", "ID"]
     df = preprocess_data(df, columns)
     if df.empty:
         raise ValueError("El DataFrame está vacío después del preprocesamiento.")
@@ -63,7 +64,9 @@ try:
     end_predict_time = time.time()
 
 # Guardado, visualización y explicación
-    df_result.to_csv("data/output/high_density_with_noise.csv", index=False)
+    df_result['ID'] = ids
+    df = df[["ID"] + [col for col in df.columns if col != "ID"]]
+    df_result.to_csv("1.csv", index=False)
     
     # Asegúrate de que el DataFrame de resultados contiene 'anomaly'
     if 'anomaly' not in df_result.columns:
@@ -86,9 +89,8 @@ try:
     print(f"Tiempo total de predicción: {end_predict_time - start_predict_time:.2f}")
     print(f"Tiempo total: {end_time - start_time:.2f}")
     print("Análisis completado y gráfico generado.")
-    print(df.columns)
-    plot_anomaly_pie(df_result)
-    plot_anomaly_scatter(df_result, 'Column1.timing', 'y')
+  #  plot_anomaly_pie(df_result)
+  #  plot_anomaly_scatter(df_result, 'Column1.timing', 'y')
 
 
 
