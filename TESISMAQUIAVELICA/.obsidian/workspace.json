@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exposicion/Exposición.md",
+                "file": "Algoritmos de Deteccion de Anomalias/Autoencoders.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Exposición"
+              "title": "Autoencoders"
             }
           }
         ],
@@ -236,9 +236,12 @@
   },
   "active": "3a66c8ab4e47e723",
   "lastOpenFiles": [
-    "Exposicion/Métodos de seguridad de SI.md",
-    "Comparaciones Algoritmos.md",
     "Algoritmos en cuestion.md",
+    "Comparaciones Algoritmos.md",
+    "Exposicion/Exposición.md",
+    "Bibliografía/Bibliografia.md",
+    "Contexto Mineria de Datos/Minería de Datos.md",
+    "Exposicion/Métodos de seguridad de SI.md",
     "Validación de Propuesta.md",
     "Validación de Propuesta Tesis.md",
     "Tesis.md",
@@ -256,20 +259,17 @@
     "Algoritmos de Deteccion de Anomalias/DBSCAN.md",
     "Algoritmos de Deteccion de Anomalias/Autoencoders.md",
     "Algoritmos de Deteccion de Anomalias/Isolation Forest.md",
-    "Exposicion/Exposición.md",
     "Untitled",
     "Patrones de Diseño/Factory Method.md",
     "Exposicion",
     "Algoritmos de Deteccion de Anomalias/Prophet.md",
     "+ Falta por completar",
-    "Contexto Mineria de Datos/Minería de Datos.md",
     "Patrones de Diseño/Strategy Pattern.md",
     "zmisc/Pasted image 20241129133914.png",
     "zmisc/Pasted image 20241129134021.png",
     "Contexto Mineria de Datos",
     "New folder/factory-method-en.png.opdownload",
     "zmisc",
-    "Bibliografía/Bibliografia.md",
     "Bienvenido.md",
     "Patrones de Diseño",
     "Bibliografía",

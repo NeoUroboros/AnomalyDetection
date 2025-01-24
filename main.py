@@ -28,7 +28,7 @@ try:
 
     # Lectura del archivo
     start_lecture_time = time.time()
-    doc = factory.getDocument("dataset_denso.csv")
+    doc = factory.getDocument("datos_sinteticos_mejorado.csv")
     df = doc.readDocument()
     if df is None or df.empty:
         raise ValueError("El archivo no contiene datos o no se pudo leer correctamente.")

@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 # Cargar los datasets
-df_truth = pd.read_csv("dataset_denso.csv", delimiter=",")  # Cambiar delimitador si es necesario
+df_truth = pd.read_csv("datos_sinteticos_mejorado.csv", delimiter=",")  # Cambiar delimitador si es necesario
 #df_pred = pd.read_csv("1.csv", delimiter=",")
 df_pred = pd.read_excel("2.xlsx")
 

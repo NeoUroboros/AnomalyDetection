@@ -1,69 +1,49 @@
-Tu flujo de exposición tiene una estructura sólida y lógica, pero se puede mejorar para hacerla más atractiva y clara. Aquí tienes algunos ajustes y sugerencias:
+**Elevator Speech**
 
-### 1. Introducción a la Industria 4.0
-**Contexto de la Industria 4.0:**
-- Define qué es la Industria 4.0 y su importancia en el panorama industrial moderno.
-- Destaca los avances clave, como la automatización, la Internet de las Cosas (IoT), la inteligencia artificial y la analítica avanzada.
-- **Sugiere un toque de narrativa**: Comienza con una breve historia o ejemplo de un avance significativo en la Industria 4.0 para captar la atención.
+La Cuarta Revolución Industrial, conocida como Industria 4.0, está transformando radicalmente el entorno industrial a través de la digitalización y la integración de tecnologías avanzadas como IoT, inteligencia artificial y automatización. Sin embargo enfrentan desafíos a la hora de proteger datos críticos.  
 
-### 2. Desafíos de la Industria 4.0
-**Seguridad de los Datos:**
-- Explica por qué la seguridad de los datos es un desafío crítico en el contexto de la Industria 4.0.
-- **Profundiza en la situación problemática**: Ejemplos de ciberataques recientes o problemas de seguridad de datos en la industria para ilustrar la gravedad del problema.
+Con el avance de la Industria 4.0, surge un aumento en la complejidad de los sistemas, lo que dificulta garantizar la seguridad y adaptabilidad. La necesidad de detectar de manera temprana las vulnerabilidades del sistema es crucial para evitar fallos operativos y proteger datos críticos.  
 
-### 3. Métodos de Seguridad en el Mundo
-**Estrategias Actuales:**
-- Enumera y describe brevemente los métodos de seguridad más utilizados, como el cifrado, autenticación multifactor, auditorías de seguridad, etc.
-- Introduce la detección de anomalías como una herramienta vital y discute los desafíos que implica su implementación efectiva.
-- **Comparación Visual**: Usa tablas o gráficos para comparar diferentes métodos de seguridad.
+Aunque las medidas tradicionales como cifrado, autenticación, capacitación en seguridad y redundancia son fundamentales, presentan limitaciones significativas: el cifrado es inútil si las claves son comprometidas, la autenticación puede fallar ante ataques como phishing, los errores humanos siguen siendo el eslabón más débil y la redundancia mal diseñada puede ser un blanco fácil para atacantes. Por ello, es esencial complementarlas con herramientas avanzadas como la detección de anomalías en tiempo real, capaces de identificar y responder a comportamientos sospechosos antes de que se conviertan en amenazas críticas.  
 
-### 4. Estrategias de Detección de Anomalías
-**Métodos de Detección de Anomalías:**
-- Describe las estrategias utilizadas por los sistemas industriales, como Isolation Forest, Z-Score, DBSCAN y Autoencoders.
-- **Transición al problema de investigación**: Explica cómo la necesidad de integrar todas estas estrategias en un solo módulo da lugar a tu investigación.
+Un módulo de detección de anomalías es crucial en sistemas industriales, ya que permite una supervisión constante para identificar desviaciones en el comportamiento normal y responder de forma temprana, minimizando riesgos y costos. Sin embargo, enfrenta desafíos clave como procesar grandes volúmenes de datos en tiempo real, garantizar la precisión algorítmica para distinguir entre variaciones normales y anomalías reales, y manejar el balance entre falsos positivos, que generan alertas innecesarias, y falsos negativos, que podrían pasar desapercibidos y causar fallos críticos. Estos aspectos hacen indispensable un diseño robusto y adaptativo.  
 
-### 5. Problema de Investigación
-**Integración de Estrategias:**
-- Describe el desafío de integrar múltiples algoritmos de detección de anomalías en un módulo único.
-- **Enfoque Automático**: Explica la importancia de tener un módulo que automáticamente seleccione el mejor algoritmo según las características de los datos.
+En los sistemas industriales, la detección de anomalías emplea métodos como Isolation Forest, Z-Score, DBSCAN y Autoencoders. Cada uno de ellos aporta beneficios únicos dependiendo de las características de los datos. Por ejemplo, Isolation Forest es eficiente en datos de gran volumen, mientras que los Autoencoders destacan en contextos de alta dimensionalidad. Z-Score brilla cuando los datos siguen una distribución normal y el fuerte de DBSCAN se encuentra en los datasets densos.  
 
-### 6. Objeto de Estudio
-**Tu Módulo de Detección de Anomalías:**
-- Explica en profundidad cómo funciona tu módulo, qué tecnologías utiliza y su arquitectura.
-- **Casos de Uso**: Proporciona ejemplos concretos de cómo tu módulo puede ser aplicado en la industria para resolver problemas reales.
+El desafío radica en diseñar un módulo que pueda seleccionar automáticamente el mejor algoritmo según las características de los datos, garantizando precisión en la detección de anomalías en tiempo real. Este problema es especialmente relevante en entornos industriales simulados, donde las variables cambian constantemente.  
 
-### 7. Objetivo General, Alcance e Impacto
-**Objetivo General del Proyecto:**
-- Define claramente el objetivo principal de tu proyecto.
-- **Alcance del Proyecto**: Describe las limitaciones y el ámbito de aplicación.
-- **Impacto en la Industria 4.0**: Concluye con una visión inspiradora sobre cómo tu proyecto puede transformar la seguridad de datos en la Industria 4.0, mejorando la fiabilidad y la resiliencia de los sistemas industriales.
+Para abordar este desafío, se utilizó como objeto de estudio un entorno industrial simulado compuesto por:  
 
-### **Narrativa de Ejemplo**
-Para darte una idea más clara, aquí tienes un extracto de cómo podría sonar:
+1. Sensores
 
----
+2. Microcontroladores STM32
 
-**Introducción a la Industria 4.0:**
-"La Cuarta Revolución Industrial, o Industria 4.0, está redefiniendo el panorama industrial. Con avances como la automatización, IoT y la inteligencia artificial, las fábricas inteligentes están más conectadas y eficientes que nunca. Sin embargo, estos avances traen consigo nuevos desafíos, especialmente en la seguridad de los datos. Imagina una planta de manufactura que opera 24/7, donde una brecha de seguridad puede interrumpir no solo la producción, sino comprometer la integridad de información crítica."
+3. PLC basado en OpenPLC
 
-**Desafíos de la Industria 4.0:**
-"En este contexto, la seguridad de los datos emerge como un pilar fundamental. La creciente interconexión de dispositivos y sistemas hace que sean vulnerables a ataques cibernéticos. Un reciente estudio revela que..."
+Para validar la propuesta, se comparó el rendimiento de algoritmos implementados en Python frente a herramientas como Knime. Los resultados demuestran que el módulo mejora significativamente la seguridad, reduce falsos positivos y negativos, y asegura una respuesta rápida ante posibles anomalías.  
 
-**Métodos de Seguridad en el Mundo:**
-"Para mitigar estas amenazas, se emplean diversas estrategias: cifrado de datos, autenticación multifactor, auditorías de seguridad y más. Sin embargo, uno de los métodos más prometedores es la detección de anomalías, que permite identificar comportamientos anómalos y potencialmente maliciosos en tiempo real..."
+Impacto Potencial:
 
-**Estrategias de Detección de Anomalías:**
-"Los sistemas industriales utilizan varias estrategias para detectar anomalías, incluyendo Isolation Forest, Z-Score, DBSCAN y Autoencoders. Cada uno de estos métodos ofrece ventajas específicas..."
+Este módulo no solo aumenta la resiliencia de los sistemas industriales, sino que también establece un nuevo estándar en la gestión de la seguridad, fortaleciendo la transformación digital en la Industria 4.0.  
 
-**Problema de Investigación:**
-"Sin embargo, integrar todas estas estrategias en un solo módulo que automáticamente elija el mejor algoritmo según las características de los datos es un desafío. Aquí es donde entra mi investigación..."
+En conclusión:
 
-**Objeto de Estudio:**
-"Mi módulo de detección de anomalías emplea una arquitectura que combina las mejores características de cada estrategia, optimizando la detección en tiempo real..."
+El diseño del módulo de detección de anomalías permitió adaptarse eficazmente a las características cambiantes de los datos en entornos industriales simulados. 
 
-**Objetivo General, Alcance e Impacto:**
-"El objetivo general de este proyecto es... Este módulo transformará la seguridad en la Industria 4.0, proporcionando una solución robusta y eficiente para la protección de datos industriales..."
+Los algoritmos implementados en Python demostraron un mejor desempeño en métricas clave de precisión. 
 
----
+La simulación de escenarios diversos fue crucial para validar la efectividad del módulo en la detección de anomalías complejas. 
 
-Espero que estas sugerencias te ayuden a mejorar tu flujo de exposición. Si necesitas más ajustes o detalles, estaré encantado de ayudarte. ¡Buena suerte con tu presentación!
+Los resultados obtenidos respaldan la utilidad del módulo desarrollado para aplicaciones industriales donde la precisión y la flexibilidad son prioritarias sobre el tiempo de procesamiento. 
+
+A pesar de las limitaciones encontradas, la implementación de Isolation Forest en KNIME sigue siendo una opción sólida debido a su gran adaptabilidad frente a distintos escenarios de datos.
+
+A modo de recomendación:
+
+Probar el mecanismo de detección de anomalías en un entorno real para comprobar su efectividad frente a datos generados en tiempo real. 
+
+Analizar los resultados de otros algoritmos de aprendizaje automático utilizados para la detección de anomalías, comparándolos con los obtenidos por Isolation Forest, Z-Score, DBSCAN y Autoencoders. 
+
+Evaluar el desempeño del algoritmo en bases de datos con características adicionales, como datos generados por sensores industriales o sistemas distribuidos, y comparar los resultados obtenidos.
+
+

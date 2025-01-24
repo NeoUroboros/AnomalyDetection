@@ -1,7 +1,7 @@
 {
   "defaultVoice": "speechSynthesis-Microsoft Sabina - Spanish (Mexico)",
   "pitch": 0.6,
-  "rate": 1,
+  "rate": 1.4,
   "volume": 0.5,
   "speakLinks": false,
   "speakFrontmatter": false,
